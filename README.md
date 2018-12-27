@@ -9,11 +9,11 @@
   2.下载ET，当前ET版本为4.0版本。（注意，ET现在默认的消息包长度为2，以前的某个版本是4，目前的此分支里客户端设定的消息包长度为2，与最新ET版本一致）
   地址：https://github.com/egametang/ET
   
-  3.将客户端定义的HotfixMessage.proto文件复制一份（..\Assets\GameMain\Scripts\Network\ETNetwork\ProtoDefine\）,覆盖ET服务器里的HotfixMessage.proto文件（ET-Master\Proto\）
+  3.将客户端StarForce定义的HotfixMessage.proto文件复制一份（..\Assets\GameMain\Scripts\Network\ETNetwork\ProtoDefine\）,覆盖ET服务器里的HotfixMessage.proto文件（ET-Master\Proto\）
   
   4.打开ET端的HotfixMessage.proto文件，因为是从客户端复制过来的，因此需要将文件里的package的值由StarForce改为ET里使用的ETHotfix
   
-  5.分别在前端和后端的Unity工程里，选择菜单:Tools\Proto2CS,生成proto的消息文件
+  5.分别在StarForce端和ET端的Unity工程里，选择菜单:Tools\Proto2CS,生成proto的消息文件
   
   6.因为我们新定义了两个消息（TestMsg 和 GFTestMsg）用于测试，而原来ET里并没有定义这俩消息，因此也没有定义这俩消息的Handler，因此这里需要大家自己去写这俩消息的Handler，如果大家由需要，我也可以提供，但是这里就不提供了。。
   
