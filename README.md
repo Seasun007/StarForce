@@ -7,6 +7,7 @@
   1.下载此分支，并用Unity打开，（本人版本是2018.3）
   
   2.下载ET，当前ET版本为4.0版本。（注意，ET现在默认的消息包长度为2，以前的某个版本是4，目前的此分支里客户端设定的消息包长度为2，与最新ET版本一致）
+  地址：https://github.com/egametang/ET
   
   3.将客户端定义的HotfixMessage.proto文件复制一份（..\Assets\GameMain\Scripts\Network\ETNetwork\ProtoDefine\）,覆盖ET服务器里的HotfixMessage.proto文件（ET-Master\Proto\）
   
