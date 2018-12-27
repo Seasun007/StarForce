@@ -20,7 +20,6 @@ namespace StarForce
         void OnClickSendBtn()
         {
             //测试案例而已，不专注性能
-            Debug.Log(input.text);
 
             if (input == null)
             {
