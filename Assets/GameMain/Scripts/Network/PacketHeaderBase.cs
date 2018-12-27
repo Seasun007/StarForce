@@ -17,11 +17,13 @@ namespace StarForce
             get;
         }
 
-        public int Id
-        {
-            get;
-            set;
-        }
+        //public int Id
+        //{
+        //    get;
+        //    set;
+        //}
+
+        public ushort Id { get; set; }
 
         public int PacketLength
         {
