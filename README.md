@@ -1,4 +1,32 @@
-﻿## HOMEPAGE
+## ET Net 的对接
+  ET简介：ET是一个基于.net core 的开源客户端-服务器框架，相信跑到这里来的人应该都晓得这个框架。
+  
+  这个分支的主要功能就是把GF的网络模块和ET的网络连通起来：）可以直接用GF的发送消息的方式向ET服务器发送消息。因此这个分支将只使用的ET的服务器相关功能
+  
+## 使用流程
+  1.下载此分支，并用Unity打开，（本人版本是2018.3）
+  
+  2.下载ET，当前ET版本为4.0版本。（注意，ET现在默认的消息包长度为2，以前的某个版本是4，目前的此分支里客户端设定的消息包长度为2，与最新ET版本一致）
+  地址：https://github.com/egametang/ET
+  
+  3.将客户端StarForce定义的HotfixMessage.proto文件复制一份（..\Assets\GameMain\Scripts\Network\ETNetwork\ProtoDefine\）,覆盖ET服务器里的HotfixMessage.proto文件（ET-Master\Proto\）
+  
+  4.打开ET端的HotfixMessage.proto文件，因为是从客户端复制过来的，因此需要将文件里的package的值由StarForce改为ET里使用的ETHotfix
+  
+  5.分别在StarForce端和ET端的Unity工程里，选择菜单:Tools\Proto2CS,生成proto的消息文件
+  
+  6.因为我们新定义了两个消息（TestMsg 和 GFTestMsg）用于测试，而原来ET里并没有定义这俩消息，因此也没有定义这俩消息的Handler，因此这里需要大家自己去写这俩消息的Handler，如果大家由需要，我也可以提供，但是这里就不提供了。。
+  
+  7.启动ET服务端
+  
+  8.打开前端工程里的测试场景（ETNetSample）,直接开始游戏，会默认连接到已启动的ET服务端。默认连接的IP是：127.0.0.1：10002
+  此时你就可以在console窗口里看到连接情况了。
+  
+## 一些额外的介绍
+  1.客户端消息的序列化与反序列化是使用了与ET一致的ProtoBuf库
+  2.连接服务器相关的代码所在脚本：ProcedureNetSample
+
+## HOMEPAGE
 
 - **English** - Coming soon.
 - **简体中文** - [http://gameframework.cn/](http://gameframework.cn/)
