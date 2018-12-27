@@ -11,9 +11,13 @@
   3.将客户端定义的HotfixMessage.proto文件复制一份（..\Assets\GameMain\Scripts\Network\ETNetwork\ProtoDefine\）,覆盖ET服务器里的HotfixMessage.proto文件（ET-Master\Proto\）
   
   4.打开ET端的HotfixMessage.proto文件，因为是从客户端复制过来的，因此需要将文件里的package的值由StarForce改为ET里使用的ETHotfix
+  
   5.分别在前端和后端的Unity工程里，选择菜单:Tools\Proto2CS,生成proto的消息文件
+  
   6.因为我们新定义了两个消息（TestMsg 和 GFTestMsg）用于测试，而原来ET里并没有定义这俩消息，因此也没有定义这俩消息的Handler，因此这里需要大家自己去写这俩消息的Handler，如果大家由需要，我也可以提供，但是这里就不提供了。。
+  
   7.启动ET服务端
+  
   8.打开前端工程里的测试场景（ETNetSample）,直接开始游戏，会默认连接到已启动的ET服务端。默认连接的IP是：127.0.0.1：10002
   此时你就可以在console窗口里看到连接情况了。
   
